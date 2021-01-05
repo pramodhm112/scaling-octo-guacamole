@@ -24,3 +24,6 @@ jobs:
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s .m2/settings.xml
+      env:
+        JFROG_USER: ${{ secrets.JFROG_USER }}
+        JFROG_TOKEN: ${{ secrets.JFROG_TOKEN }}
